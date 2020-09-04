@@ -29,6 +29,7 @@ This project was developed with the following technologies:
   - Express.js
   - PostgreSQL
   - Bcrypt
+  - JWT
   - Eslint and Prettier
 
 ## 💻 Project
