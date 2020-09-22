@@ -13,7 +13,7 @@ class SessionController {
 
     // verificando se a senha não está correta
     if (!(await user.checkPassword(password))) {
-      return res.status(401).json({ error: 'Senha incorreta!' });
+      return res.status(401).json({ error: 'Wrong password!' });
     }
 
     const { id, name } = user;
