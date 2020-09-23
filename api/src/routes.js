@@ -20,4 +20,6 @@ routes.post('/tasks', TaskController.store);
 
 routes.get('/tasks', TaskController.index);
 
+routes.put('/tasks/:task_id', TaskController.update);
+
 export default routes;
