@@ -28,6 +28,22 @@ class TaskController {
 
     return res.json(tasks);
   }
+
+  async update(req, res) {
+    const { task_id } = req.params;
+
+    const task = await Task.findByPk(task_id);
+
+    if (!task) {
+      return res
+        .status(400)
+        .json({ Error: 400, message: "Task doesn't exists" });
+    }
+
+    await task.update(req.body);
+
+    return res.json(task);
+  }
 }
 
 export default new TaskController();
